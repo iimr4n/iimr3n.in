@@ -6,14 +6,6 @@
   --accent: #3b82f6;
   --border: #1f1f23;
 }
-body.light {
-  --bg: #ffffff;
-  --surface: #f5f5f7;
-  --text: #000000;
-  --muted: #6e6e73;
-  --accent: #0071e3;
-  --border: #d2d2d7;
-}
 
 * {
   margin: 0;
@@ -42,21 +34,7 @@ body {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
-#themeToggle {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  color: var(--text);
-}
 
 .header .container {
   height: 70px;
