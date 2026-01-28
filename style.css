@@ -115,3 +115,34 @@ body {
   border-top: 1px solid var(--border);
   color: var(--gray);
 }
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+}
