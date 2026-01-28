@@ -1,41 +1,117 @@
+:root {
+  --black: #000;
+  --gray: #6e6e73;
+  --light: #f5f5f7;
+  --border: #d2d2d7;
+  --accent: #0071e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Inter, system-ui, sans-serif;
-  margin: 0;
-  color: #000;
+  color: var(--black);
+  background: #fff;
+  line-height: 1.6;
 }
 
-header {
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+
+.header .container {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
+  align-items: center;
+  height: 70px;
 }
 
-section {
-  padding: 60px 20px;
+.logo {
+  font-weight: 600;
+}
+
+.cta {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  padding: 120px 0;
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 600;
 }
 
 .hero h2 {
-  color: #6e6e73;
+  margin-top: 10px;
+  color: var(--gray);
+}
+
+.hero p {
+  max-width: 520px;
+  margin-top: 20px;
+  color: var(--gray);
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  background: #0071e3;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
+  margin-top: 30px;
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 12px;
   text-decoration: none;
 }
 
-footer {
-  padding: 20px;
-  border-top: 1px solid #ddd;
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section.light {
+  background: var(--light);
+}
+
+.section h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
   text-align: center;
-  color: #6e6e73;
+  border-top: 1px solid var(--border);
+  color: var(--gray);
 }
