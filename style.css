@@ -146,3 +146,41 @@ body {
     height: 180px;
   }
 }
+/* --------------------
+   Subtle Animations
+-------------------- */
+
+/* Text animation */
+.animate-text {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.7s ease-out forwards;
+}
+
+/* Photo animation */
+.animate-photo {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: fadeUp 0.9s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Photo hover (desktop only) */
+@media (hover: hover) {
+  .hero-image img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .hero-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  }
+}
